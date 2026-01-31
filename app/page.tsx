@@ -291,9 +291,6 @@ export default function Home() {
   ]}
 />
 
-
-
-
           <p className="text-lg md:text-xl font-light text-gray-400 mb-2">{t.heroSubtitle}</p>
           <p className="text-base md:text-lg font-light text-gray-500">{t.heroCategories}</p>
         </div>
