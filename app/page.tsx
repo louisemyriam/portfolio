@@ -402,7 +402,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-gray-900">
         <div className="max-w-7xl mx-auto text-center text-sm text-gray-600">
-          <p>© 2025 {t.heroName}</p>
+          <p>© 2026 {t.heroName}</p>
         </div>
       </footer>
     </div>

@@ -142,7 +142,7 @@ export default function Info() {
       <footer className="border-t border-border">
         <div className="max-w-[1200px] mx-auto px-6 py-12">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
-            <p>© 2025 — All rights reserved</p>
+            <p>© 2026 — All rights reserved</p>
             <div className="flex gap-6">
               <a href="https://linkedin.com" className="hover:opacity-70 transition-opacity">
                 LinkedIn

@@ -6,7 +6,7 @@ import { Menu, Globe } from "lucide-react"
 
 const translations = {
   fr: {
-    internshipBanner: "Disponible pour un stage à partir de fin mars 2025",
+    internshipBanner: "Disponible pour un stage à partir de fin mars 2026",
     home: "ACCUEIL",
     works: "TRAVAUX",
     about: "À PROPOS",
@@ -23,7 +23,7 @@ const translations = {
       "Je crois en la création d'expériences qui racontent des histoires et connectent avec les gens. Que ce soit à travers une interface utilisateur, un rendu 3D ou un concept de jeu, je m'efforce de créer un travail qui soit à la fois visuellement convaincant et fonctionnellement solide.",
   },
   en: {
-    internshipBanner: "Available for an internship starting end of March 2025",
+    internshipBanner: "Available for an internship starting end of March 2026",
     home: "HOME",
     works: "WORKS",
     about: "ABOUT",
