@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, Globe, ArrowLeft } from "lucide-react"
-import { use } from "react"
+import { useParams } from "next/navigation"  
 
 const translations = {
   fr: {
@@ -12,7 +12,7 @@ const translations = {
     works: "TRAVAUX",
     about: "À PROPOS",
     contact: "CONTACT",
-    backToWorks: " Retour aux travaux",
+    backToWorks: "← Retour aux travaux",
     context: "Contexte",
     objective: "Objectif",
     tools: "Outils utilisés",
@@ -269,13 +269,16 @@ const projectData: Record<string, any> = {
 
 }
 
-export default function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = use(params)
+
+export default function ProjectPage() {
+  const params = useParams<{ id: string }>()   // ✅ CHANGED
+  const id = params?.id ?? "1"                 // ✅ CHANGED
+
   const [lang, setLang] = useState<"fr" | "en">("fr")
   const [menuOpen, setMenuOpen] = useState(false)
   const t = translations[lang]
 
-  const project = projectData[resolvedParams.id] || projectData["1"]
+  const project = projectData[id] || projectData["1"]  // ✅ CHANGED
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -360,13 +363,12 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
           {/* Hero Image */}
           <div className="aspect-video bg-gray-900 mb-12 overflow-hidden">
-            <img
-              src={`/public/project-${resolvedParams.id}-hero.jpg`}
-              alt={project.title[lang]}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
+        <img
+          src={`/project-${id}-hero.jpg`}   // ✅ CHANGED
+          alt={project.title[lang]}
+          className="w-full h-full object-cover"
+        />
+      </div>
           {/* Title and Type */}
           <h1 className="text-5xl md:text-7xl font-light mb-4">{project.title[lang]}</h1>
           <p className="text-xl text-gray-400 mb-20">{project.type[lang]}</p>
@@ -396,67 +398,86 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
           </div>
 
  {/* Visual Gallery */}
-{!["6", "7"].includes(resolvedParams.id) && (
-  <div className="flex flex-col items-center justify-center gap-6 mb-20">
-    {["3", "5"].includes(resolvedParams.id) ? (
-      // For projects 3 (9 images) and 5 (7 images)
-      <div className="grid md:grid-cols-2 gap-4 w-full max-w-4xl mx-auto">
-        {Array.from({ length: resolvedParams.id === "3" ? 9 : 7 }).map((_, i) => (
-          <div
-            key={i}
-            className="aspect-square overflow-hidden bg-black rounded-md"
-          >
-            <img
-              src={`/project-${resolvedParams.id}-${i + 1}.jpg`}
-              alt={`${project.title[lang]} image ${i + 1}`}
-              className="w-full h-full object-contain object-center"
-            />
-          </div>
-        ))}
-      </div>
-    ) : resolvedParams.id === "2" ? (
-      // One centered image
-      <div className="aspect-video w-full max-w-4xl overflow-hidden bg-black rounded-md">
-        <img
-          src={`/project-${resolvedParams.id}-1.jpg`}
-          alt={`${project.title[lang]} image`}
-          className="w-full h-full object-contain object-center"
-        />
-      </div>
-    ) : resolvedParams.id === "1" ? (
-      // Fixed layout for project 1 — same size, centered, no gaps
-      <div className="flex flex-wrap justify-center gap-4 w-full max-w-4xl mx-auto">
-        {["1", "2"].map((num) => (
-          <div key={num} className="w-[48%] aspect-square bg-black rounded-md overflow-hidden">
-            <img
-              src={`/project-${resolvedParams.id}-${num}.jpg`}
-              alt={`${project.title[lang]} image ${num}`}
-              className="w-full h-full object-contain object-center"
-            />
-          </div>
-        ))}
-      </div>
-    ) : (
-      // Default fallback layout for others
-      <div className="grid md:grid-cols-2 gap-4 w-full max-w-4xl mx-auto">
-        <div className="aspect-square overflow-hidden bg-black rounded-md">
-          <img
-            src={`/project-${resolvedParams.id}-1.jpg`}
-            alt={`${project.title[lang]} image 1`}
-            className="w-full h-full object-contain object-center"
-          />
+{!["6", "7"].includes(id) && (          // ✅ CHANGED
+        <div className="flex flex-col items-center justify-center gap-6 mb-20">
+
+          {["3", "5"].includes(id) ? (
+            <div className="grid md:grid-cols-2 gap-4 w-full max-w-4xl mx-auto">
+              {Array.from({ length: id === "3" ? 9 : 7 }).map((_, i) => (
+                <div key={i} className="aspect-square overflow-hidden bg-black rounded-md">
+                  <img
+                    src={`/project-${id}-${i + 1}.jpg`}   // ✅ CHANGED
+                    alt={`${project.title[lang]} image ${i + 1}`}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+
+          ) : id === "2" ? (
+            <div className="aspect-video w-full max-w-4xl overflow-hidden bg-black rounded-md">
+              <img
+                src={`/project-${id}-1.jpg`}   // ✅ CHANGED
+                alt={`${project.title[lang]} image`}
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+          ) : id === "1" ? (
+            <div className="flex flex-wrap justify-center gap-4 w-full max-w-4xl mx-auto">
+              {["1", "2"].map((num) => (
+                <div key={num} className="w-[48%] aspect-square bg-black rounded-md overflow-hidden">
+                  <img
+                    src={`/project-${id}-${num}.jpg`}   // ✅ CHANGED
+                    alt={`${project.title[lang]} image ${num}`}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : null}
         </div>
-        <div className="aspect-square overflow-hidden bg-black rounded-md">
-          <img
-            src={`/project-${resolvedParams.id}-2.jpg`}
-            alt={`${project.title[lang]} image 2`}
-            className="w-full h-full object-contain object-center"
-          />
+      )}
+{!["6", "7"].includes(id) && (          // ✅ CHANGED
+        <div className="flex flex-col items-center justify-center gap-6 mb-20">
+
+          {["3", "5"].includes(id) ? (
+            <div className="grid md:grid-cols-2 gap-4 w-full max-w-4xl mx-auto">
+              {Array.from({ length: id === "3" ? 9 : 7 }).map((_, i) => (
+                <div key={i} className="aspect-square overflow-hidden bg-black rounded-md">
+                  <img
+                    src={`/project-${id}-${i + 1}.jpg`}   // ✅ CHANGED
+                    alt={`${project.title[lang]} image ${i + 1}`}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+
+          ) : id === "2" ? (
+            <div className="aspect-video w-full max-w-4xl overflow-hidden bg-black rounded-md">
+              <img
+                src={`/project-${id}-1.jpg`}   // ✅ CHANGED
+                alt={`${project.title[lang]} image`}
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+          ) : id === "1" ? (
+            <div className="flex flex-wrap justify-center gap-4 w-full max-w-4xl mx-auto">
+              {["1", "2"].map((num) => (
+                <div key={num} className="w-[48%] aspect-square bg-black rounded-md overflow-hidden">
+                  <img
+                    src={`/project-${id}-${num}.jpg`}   // ✅ CHANGED
+                    alt={`${project.title[lang]} image ${num}`}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : null}
         </div>
-      </div>
-    )}
-  </div>
-)}
+      )}
 
        
 
@@ -476,21 +497,19 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   )}
 
   {/* Then video if applicable */}
-  {["2", "4", "5", "6", "7"].includes(resolvedParams.id) && (
-    <div className="aspect-video w-full max-w-5xl mx-auto">
-      <video controls className="w-full h-full rounded-md">
-        <source src={`/project-${resolvedParams.id}-process.mp4`} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+  {["2", "4", "5", "6", "7"].includes(id) && (   // ✅ CHANGED
+        <video controls className="w-full max-w-5xl mx-auto">
+          <source src={`/project-${id}-process.mp4`} type="video/mp4" />  {/* ✅ */}
+        </video>
+      )}
+
     </div>
-  )}
-</div>
 
 {/* Large Process Image (Hide for projects with video) */}
-{!["2", "4", "5", "6", "7"].includes(resolvedParams.id) && (
+{!["2", "4", "5", "6", "7"].includes(id) && (
   <div className="aspect-video overflow-hidden mb-20">
     <img
-      src={`/project-${resolvedParams.id}-process.jpg`}
+      src={`/project-${id}-process.jpg`}
       alt={`${project.title[lang]} – Process`}
       className="w-full h-full object-cover"
     />
