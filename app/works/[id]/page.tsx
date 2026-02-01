@@ -12,7 +12,7 @@ const translations = {
     works: "TRAVAUX",
     about: "À PROPOS",
     contact: "CONTACT",
-    backToWorks: "← Retour aux travaux",
+    backToWorks: "Retour aux travaux",
     context: "Contexte",
     objective: "Objectif",
     tools: "Outils utilisés",
