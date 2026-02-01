@@ -361,7 +361,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
           {/* Hero Image */}
           <div className="aspect-video bg-gray-900 mb-12 overflow-hidden">
             <img
-              src={`/project-${resolvedParams.id}-hero.jpg`}
+              src={`/public/project-${resolvedParams.id}-hero.jpg`}
               alt={project.title[lang]}
               className="w-full h-full object-cover"
             />
