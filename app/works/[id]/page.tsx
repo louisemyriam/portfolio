@@ -25,7 +25,7 @@ const translations = {
     works: "WORKS",
     about: "ABOUT",
     contact: "CONTACT",
-    backToWorks: "← Back to works",
+    backToWorks: " Back to works",
     context: "Context",
     objective: "Objective",
     tools: "Tools used",
