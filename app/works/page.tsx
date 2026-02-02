@@ -97,6 +97,7 @@ const allProjects = [
   }, */
 ]
 
+
 export default function Works() {
   const [lang, setLang] = useState<"fr" | "en">("fr")
   const [menuOpen, setMenuOpen] = useState(false)
