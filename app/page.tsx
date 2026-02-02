@@ -51,10 +51,10 @@ const translations = {
 }
 
 const heroImages = [
-  "/figma-ui-design-colorful-interface.jpg",
-  "/3d-blender-render-abstract-sculpture.jpg",
-  "/video-game-concept-art-futuristic.jpg",
-  "/motion-design-animation-colorful.jpg",
+  "/figma-ui-design-colorful-interface.png",
+  "/3d-blender-render-abstract-sculpture.png",
+  "/video-game-concept-art-futuristic.png",
+  "/motion-design-animation-colorful.png",
 ]
 
 const selectedProjects = [
@@ -63,7 +63,7 @@ const selectedProjects = [
     title: "DIORAMA 3D",
     titleEn: "DIORAMA 3D",
     category: "3D Modeling — Blender",
-    image: "/project-1-thumb.jpg",
+    image: "/project-1-thumb.png",
   },
   {
     id: 2,
@@ -71,7 +71,7 @@ const selectedProjects = [
     titleEn: "MOTION DESIGN",
     category: "Motion design — After Effects ",
     categoryEn: "Motion design — After Effects",
-    image: "/project-2-thumb.jpg",
+    image: "/project-2-thumb.png",
   },
   {
     id: 3,
@@ -79,7 +79,7 @@ const selectedProjects = [
     titleEn: " WEBDESIGN ",
     category: "PROTOTYPAGE - FIGMA",
     categoryEn: "PROTOTYPING FIGMA",
-    image: "/photo1.jpg",
+    image: "/photo1.png",
   },
   {
     id: 4,
@@ -87,7 +87,7 @@ const selectedProjects = [
     titleEn: "GAME DESIGN",
     category: "Concept de jeu vidéo — Unity",
     categoryEn: "Video game concept — Unity",
-    image: "/project-4-thumb.jpg",
+  image: "/project-4-thumb.png",
   },
 ]
 
@@ -283,10 +283,10 @@ export default function Home() {
         <div className="relative z-10 text-center px-6">
         <BackgroundFollowImageWords
   words={[
-    { word: "Louise", image: "/project-3-hero.jpg" },
-    { word: "Myriam", image: "/project-1-2.jpg" },
-    { word: "HAMDI", image: "project-4-hero.jpg" },
-    { word: "DAGHMOUNI", image: "/project-2-hero.jpg" },
+      { word: "Louise", image: "/project-3-hero.png" },
+    { word: "Myriam", image: "/project-1-2.png" },
+    { word: "HAMDI", image: "project-4-hero.png" },
+    { word: "DAGHMOUNI", image: "/project-2-hero.png" },
 
   ]}
 />
@@ -319,6 +319,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          
 
           <div className="text-center">
             <Link
