@@ -479,7 +479,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   {["2", "4", "5", "6", "7"].includes(resolvedParams.id) && (
     <div className="aspect-video w-full max-w-5xl mx-auto">
       <video controls className="w-full h-full rounded-md">
-        <source src={`/project-${resolvedParams.id}-process.mp4`} type="video/mp4" />
+        <source src={`/project-${resolvedParams.id}-process.webm`} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
