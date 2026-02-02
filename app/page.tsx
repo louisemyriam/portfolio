@@ -319,7 +319,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          
+
 
           <div className="text-center">
             <Link
@@ -339,7 +339,7 @@ export default function Home() {
       <div className="w-full max-w-sm mx-auto md:mx-0">
         <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-lg">
           <img
-            src="/3d-blender-render-abstract-sculpture.jpg"
+            src="/3d-blender-render-abstract-sculpture.png"
             alt="3D Render"
             className="w-full h-full object-cover"
           />
@@ -361,7 +361,7 @@ export default function Home() {
             {/*
       <section className="py-24 animate-on-scroll opacity-0">
         <div className="w-full h-[80vh] relative overflow-hidden">
-          <img src="/3d-blender-render-abstract-sculpture.jpg" alt="" className="w-full h-full object-cover" />
+            <img src="/3d-blender-render-abstract-sculpture.png" alt="" className="w-full h-full object-cover" />
         </div>
       </section> */}
 

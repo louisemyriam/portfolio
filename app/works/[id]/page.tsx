@@ -364,7 +364,7 @@ export default function ProjectPage() {
           {/* Hero Image */}
           <div className="aspect-video bg-gray-900 mb-12 overflow-hidden">
         <img
-          src={`/project-${id}-hero.jpg`}   // ✅ CHANGED
+          src={`/project-${id}-hero.png`}   // ✅ CHANGED
           alt={project.title[lang]}
           className="w-full h-full object-cover"
         />
@@ -406,7 +406,7 @@ export default function ProjectPage() {
               {Array.from({ length: id === "3" ? 9 : 7 }).map((_, i) => (
                 <div key={i} className="aspect-square overflow-hidden bg-black rounded-md">
                   <img
-                    src={`/project-${id}-${i + 1}.jpg`}   // ✅ CHANGED
+                    src={`/project-${id}-${i + 1}.png`}   // ✅ CHANGED
                     alt={`${project.title[lang]} image ${i + 1}`}
                     className="w-full h-full object-contain"
                   />
@@ -417,7 +417,7 @@ export default function ProjectPage() {
           ) : id === "2" ? (
             <div className="aspect-video w-full max-w-4xl overflow-hidden bg-black rounded-md">
               <img
-                src={`/project-${id}-1.jpg`}   // ✅ CHANGED
+                src={`/project-${id}-1.png`}   // ✅ CHANGED
                 alt={`${project.title[lang]} image`}
                 className="w-full h-full object-contain"
               />
@@ -446,7 +446,7 @@ export default function ProjectPage() {
               {Array.from({ length: id === "3" ? 9 : 7 }).map((_, i) => (
                 <div key={i} className="aspect-square overflow-hidden bg-black rounded-md">
                   <img
-                    src={`/project-${id}-${i + 1}.jpg`}   // ✅ CHANGED
+                    src={`/project-${id}-${i + 1}.png`}   // ✅ CHANGED
                     alt={`${project.title[lang]} image ${i + 1}`}
                     className="w-full h-full object-contain"
                   />
@@ -457,7 +457,7 @@ export default function ProjectPage() {
           ) : id === "2" ? (
             <div className="aspect-video w-full max-w-4xl overflow-hidden bg-black rounded-md">
               <img
-                src={`/project-${id}-1.jpg`}   // ✅ CHANGED
+                src={`/project-${id}-1.png`}   // ✅ CHANGED
                 alt={`${project.title[lang]} image`}
                 className="w-full h-full object-contain"
               />
@@ -468,7 +468,7 @@ export default function ProjectPage() {
               {["1", "2"].map((num) => (
                 <div key={num} className="w-[48%] aspect-square bg-black rounded-md overflow-hidden">
                   <img
-                    src={`/project-${id}-${num}.jpg`}   // ✅ CHANGED
+                    src={`/project-${id}-${num}.png`}   // ✅ CHANGED
                     alt={`${project.title[lang]} image ${num}`}
                     className="w-full h-full object-contain"
                   />
@@ -509,7 +509,7 @@ export default function ProjectPage() {
 {!["2", "4", "5", "6", "7"].includes(id) && (
   <div className="aspect-video overflow-hidden mb-20">
     <img
-      src={`/project-${id}-process.jpg`}
+      src={`/project-${id}-process.png`}
       alt={`${project.title[lang]} – Process`}
       className="w-full h-full object-cover"
     />

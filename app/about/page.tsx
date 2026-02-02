@@ -163,7 +163,7 @@ export default function About() {
           {/* Profile Image */}
 <div className="aspect-square max-w-md mx-auto overflow-hidden rounded-lg shadow-lg">
   <img
-    src="/placeholder-user.jpg"
+    src="/placeholder-user.png"
     alt="Profile"
     className="w-full h-full object-cover"
   />

@@ -182,7 +182,7 @@ export default function Works() {
               <Link key={project.id} href={`/works/${project.id}`} className="group">
                 <div className="aspect-[4/3] bg-gray-900 mb-4 overflow-hidden">
                   <img
-                    src={`/project-${project.id}-thumb.jpg`}
+                    src={`/project-${project.id}-thumb.png`}
                     alt={project.title[lang]}
                     className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
