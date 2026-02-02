@@ -428,7 +428,7 @@ export default function ProjectPage() {
               {["1", "2"].map((num) => (
                 <div key={num} className="w-[48%] aspect-square bg-black rounded-md overflow-hidden">
                   <img
-                    src={`/project-${id}-${num}.jpg`}   // ✅ CHANGED
+                    src={`/project-${id}-${num}.png`}   // ✅ CHANGED
                     alt={`${project.title[lang]} image ${num}`}
                     className="w-full h-full object-contain"
                   />
