@@ -6,7 +6,7 @@ import { Menu, Globe } from "lucide-react"
 
 const translations = {
   fr: {
-    internshipBanner: "Disponible pour un stage à partir de fin mars 2026",
+    internshipBanner: "Disponible pour un stage à partir de mi-Février 2027",
     home: "ACCUEIL",
     works: "TRAVAUX",
     about: "À PROPOS",
@@ -17,7 +17,7 @@ const translations = {
     social: "Réseaux sociaux",
   },
   en: {
-    internshipBanner: "Available for an internship starting end of March 2026",
+    internshipBanner: "Seeking an internship starting mid-February 2027",
     home: "HOME",
     works: "WORKS",
     about: "ABOUT",

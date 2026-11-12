@@ -7,7 +7,7 @@ import { use } from "react"
 
 const translations = {
   fr: {
-    internshipBanner: "Disponible pour un stage à partir de fin mars 2025",
+    internshipBanner: "Disponible pour un stage à partir de mi-Février 2027",
     home: "ACCUEIL",
     works: "TRAVAUX",
     about: "À PROPOS",
@@ -20,7 +20,7 @@ const translations = {
     result: "Résultat",
   },
   en: {
-    internshipBanner: "Available for an internship starting end of March 2025",
+    internshipBanner: "Seeking an internship starting mid-February 2027",
     home: "HOME",
     works: "WORKS",
     about: "ABOUT",
@@ -264,7 +264,66 @@ const projectData: Record<string, any> = {
     en: "A first functional VR game prototype, including the core interactions I wanted to explore, such as shooting and object handling. While the result remains simple, it achieves its purpose and gave me hands-on experience with Unity’s VR development fundamentals.",
     fr: "Un premier prototype de jeu VR fonctionnel, intégrant les interactions de base que je souhaitais tester, comme le tir et la manipulation d’objets. Bien que le résultat reste simple, il remplit son objectif et m’a permis de découvrir concrètement les fondamentaux du développement VR avec Unity.",
   }
-}
+},
+
+
+"8": {
+  title: {
+    en: "Institutional Brochure",
+    fr: "Plaquette institutionnelle"
+  },
+
+  type: {
+    en: "Editorial Design – Adobe InDesign",
+    fr: "Design éditorial – Adobe InDesign"
+  },
+
+  context: {
+    en: "During my 2026 internship as a Graphic Design and Communications Assistant at Grenoble INP – Ensimag, I worked on an English-language institutional brochure presenting the school, its academic programs, international environment, and key strengths. The project involved organizing institutional content and creating a professional editorial layout while following the school's existing visual identity and brand guidelines.",
+
+    fr: "Lors de mon stage en 2026 en tant qu'assistante en conception graphique et communication à Grenoble INP – Ensimag, j'ai travaillé sur une plaquette institutionnelle en anglais présentant l'école, ses formations, son environnement international et ses principaux atouts. Le projet consistait à organiser les contenus institutionnels et à concevoir une mise en page professionnelle, tout en respectant l'identité visuelle et la charte graphique de l'établissement."
+  },
+
+  objective: {
+    en: "Design a clear, engaging, and professional English-language brochure that highlights the school's identity and strengths for an international audience while maintaining consistency with its institutional visual guidelines.",
+
+    fr: "Concevoir une plaquette institutionnelle en anglais, claire, attractive et professionnelle, valorisant l'identité et les atouts de l'école auprès d'un public international, tout en respectant sa charte graphique."
+  },
+
+  tools: [
+    "Adobe InDesign"
+  ],
+
+  process: {
+    en: [
+      "Reviewed the school's brand guidelines and existing communication materials.",
+      "Organized the institutional content into clearly structured sections.",
+      "Designed the brochure's page layouts using Adobe InDesign.",
+      "Applied the school's typography, colors, and visual identity.",
+      "Worked on visual hierarchy, image placement, and readability.",
+      "Refined the editorial layout to ensure consistency across the brochure.",
+      "Prepared the final document for distribution."
+    ],
+
+    fr: [
+      "Analyse de la charte graphique et des supports de communication existants de l'école.",
+      "Organisation des contenus institutionnels en rubriques structurées.",
+      "Conception et mise en page de la plaquette sur Adobe InDesign.",
+      "Application des typographies, couleurs et éléments de l'identité visuelle de l'établissement.",
+      "Travail sur la hiérarchie visuelle, le placement des images et la lisibilité.",
+      "Harmonisation de la mise en page pour assurer une cohérence graphique sur l'ensemble du document.",
+      "Préparation du document final pour sa diffusion."
+    ]
+  },
+
+  result: {
+    en: "An English-language institutional brochure presenting Grenoble INP – Ensimag through a structured and consistent editorial design. This project allowed me to strengthen my skills in Adobe InDesign, visual communication, and editorial design while gaining experience working with institutional brand guidelines in a professional environment.",
+
+    fr: "Une plaquette institutionnelle en anglais présentant Grenoble INP – Ensimag à travers une mise en page structurée et cohérente. Ce projet m'a permis de renforcer mes compétences sur Adobe InDesign, en communication visuelle et en design éditorial, tout en développant mon expérience du travail dans le respect d'une charte graphique institutionnelle en milieu professionnel."
+  }
+},
+
+
 
 
 }

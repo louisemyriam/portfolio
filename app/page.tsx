@@ -6,7 +6,7 @@ import { Menu, Globe } from "lucide-react"
 
 const translations = {
   fr: {
-    internshipBanner: "Disponible pour un stage à partir de fin mars 2026",
+    internshipBanner: "Disponible pour un stage à partir de mi-Février 2027",
     home: "ACCUEIL",
     works: "TRAVAUX",
     about: "À PROPOS",
@@ -17,17 +17,23 @@ const translations = {
     selectedWorks: "TRAVAUX SÉLECTIONNÉS",
     viewAll: "Voir tous les projets",
     infoTitle: "À PROPOS",
-    infoParagraph1:
-      "Étudiante en design numérique, je suis passionnée par la création d’interfaces, l’interaction utilisateur, l’image, les expériences immersives ainsi que la conception de jeux vidéo.",
-    infoParagraph2: "Mon travail explore le lien entre design, technologie et narration visuelle.",
+    
+infoParagraph1:
+"Ce qui m'intéresse le plus dans le design numérique, c'est la manière dont la créativité et la technologie peuvent donner naissance à des expériences visuelles et interactives. Je suis actuellement étudiante en Création Numérique, spécialisée en Design d'Expérience et d'Interface, un domaine qui me permet d'explorer le design graphique, le web design, la production audiovisuelle, l'UI/UX et les expériences numériques interactives. J'aime particulièrement donner vie à des idées à travers des outils comme Adobe Illustrator, Photoshop, InDesign, Premiere Pro et After Effects, tout en développant mes compétences en développement web, programmation, conception d'interfaces et prototypage numérique.",
+
+infoParagraph2:
+"J'aime comprendre les différentes dimensions d'un projet numérique : non seulement son apparence visuelle, mais aussi son fonctionnement et l'expérience qu'il offre à l'utilisateur. Qu'il s'agisse de créer une identité visuelle, de concevoir un site web, de produire du contenu vidéo, de développer une interface ou d'expérimenter de nouveaux outils numériques, j'apprécie de transformer une idée initiale en un projet concret, fonctionnel et accessible.",
+
+infoParagraph3:
+"Je m'intéresse également beaucoup aux jeux vidéo et au level design, notamment à la manière dont les environnements, les interactions et la narration visuelle influencent l'expérience du joueur. Plus largement, je suis attirée par les projets qui associent créativité, design, technologie et innovation. Je suis toujours enthousiaste à l'idée d'échanger et de collaborer avec des personnes évoluant dans les domaines de la création, du numérique et des nouvelles technologies.",
     getInTouch: "ENTRER EN CONTACT",
-    getInTouchText: "Je suis actuellement à la recherche d’un stage de 12 semaines à partir de fin mars 2026. Une idée, une opportunité ou une question ? N’hésitez pas à me contacter pour en discuter.",
+    getInTouchText: "Je suis actuellement à la recherche d’un stage de 16 semaines à partir de mi Février 2027. Une idée, une opportunité ou une question ? N’hésitez pas à me contacter pour en discuter.",
     email: "Email",
     instagram: "Instagram",
     linkedin: "LinkedIn",
   },
   en: {
-    internshipBanner: "Available for an internship starting end of March, 2026",
+    internshipBanner: "Available for an internship starting mid of February, 2027",
     home: "HOME",
     works: "WORKS",
     about: "ABOUT",
@@ -39,11 +45,12 @@ const translations = {
     viewAll: "View all projects",
     infoTitle: "ABOUT",
     infoParagraph1:
-      "I’m a digital design student passionate about interface creation, user interaction, visual design, immersive experiences, and game design.",
-    infoParagraph2: "My work explores the connection between design, technology, and visual storytelling.",
+      "What interests me most about digital design is how creativity and technology can shape visual and interactive experiences. I'm currently studying Digital Design, specializing in Experience Design and Interface Design, where I work across graphic design, web design, audiovisual content, UI/UX, and interactive digital experiences. A big part of what I enjoy is bringing ideas to life using tools like Adobe Illustrator, Photoshop, InDesign, Premiere Pro, After Effects, and other creative platforms, while also developing my skills in web development, coding, interface design, and digital prototyping.",
+    infoParagraph2: "I like understanding both sides of a digital project: not only how something should look, but also how it should work and feel for the user. Whether it's designing a visual identity, creating a website, producing video content, building an interface, or experimenting with new digital tools, I enjoy taking a project from the initial idea to something concrete and usable.",
+    infoParagraph3: "I'm also particularly interested in video games and level design, especially the way environments, interactions, and visual storytelling can shape the player experience. More broadly, I'm drawn to projects that combine creativity, design, technology, and innovation, and I'm always happy to connect with people working in creative, digital, and tech-driven environments",
     getInTouch: "GET IN TOUCH",
     getInTouchText:
-      "I’m currently looking for a 12-week internship starting in late March 2026. Have an idea, an opportunity, or a question? Feel free to get in touch to talk about it.",
+      "I’m currently looking for a 16-week internship starting mid February 2027. Have an idea, an opportunity, or a question? Feel free to get in touch to talk about it.",
     email: "Email",
     instagram: "Instagram",
     linkedin: "LinkedIn",
@@ -352,6 +359,7 @@ export default function Home() {
         <div className="space-y-6">
           <p className="text-lg md:text-xl font-light leading-relaxed text-gray-300">{t.infoParagraph1}</p>
           <p className="text-lg md:text-xl font-light leading-relaxed text-gray-300">{t.infoParagraph2}</p>
+          <p className="text-lg md:text-xl font-light leading-relaxed text-gray-300">{t.infoParagraph3}</p>
         </div>
       </div>
     </div>
